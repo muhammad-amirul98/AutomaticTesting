@@ -7,6 +7,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import static com.base.BasePage.delay;
 import static utilities.Utility.setUtilityDriver;
 
 public class BaseTest {
@@ -33,6 +34,7 @@ public class BaseTest {
 
     @AfterClass
     public void tearDown() {
+        delay(3000);
         driver.quit();
     }
 }
